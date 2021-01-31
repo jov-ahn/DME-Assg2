@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!--CSS styles-->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Hintel App</title>
+</head>
+<body>
+  <ion-tabs>
+    <!-- Start of Stats Page-->
+    <ion-tab tab="tab-stats">
+      <div style="background-color: #E8E8F5; height: -webkit-fill-available;">
+      <ion-label>
+        <ion-title color="dark boxin" class="ion-padding-vertical">Stats</ion-title>
+      </ion-label>
+      <ion-card class="box3">
+        <ion-card-header>
+          <ion-card-title color="light boxf">Expenses</ion-card-title>
+        </ion-card-header>
+        <ion-list class="boxlist">
+        <ion-label class="ion-float-left boxis"></ion-label>
+      </ion-card>
+      </div>
+      </ion-list>
+
+        <ion-card class="box2">
+          <ion-card-header>
+            <ion-card-title color="light boxf">Room Status</ion-card-title>
+          </ion-card-header>
+          <ion-list class="boxlist">
+          <ion-label class="ion-float-left boxis"></ion-label>
+          <canvas id="myChart"></canvas>
+          <div>
+            <ion-text class="boxgrey">Occupied: 60%</ion-text>
+            <br>
+            <ion-text class="boxgrey">Vacant: 60%</ion-text>
+            <br>
+            <ion-text class="boxgrey">Cleaning: 60%</ion-text>
+          </div>
+        </ion-card>
+        </div>
+      </ion-list>
+    </ion-tab>
+    <!-- End of Stats Page-->
+    
+    <!-- Start of Staff page -->
+    <ion-tab tab="tab-staff">
+      <div style="background-color:#E8EBF5;  height: -webkit-fill-available;">
+        <ion-label>
+         <ion-title color="dark boxin" class="ion-padding-vertical">Staff</ion-title>
+         <ion-icon name="search-outline" class="boxsearch ion-float-right"></ion-icon>
+        </ion-label>  
+        <ion-list class="boxcw">
+        <ion-label class="ion-float-left boxis">
+          <img src="img/icon.png" style="width: auto;">
+            <br>
+            <ion-toggle color="success" checked></ion-toggle>
+        </ion-label>
+          <div>
+            <ion-text class="boxtop">
+              Nicole Simmons
+            </ion-text>
+            <br>
+            <ion-text class="boxgrey box11">
+              Concierge
+            </ion-text>
+            <br>
+             <ion-text class="boxgrey">
+              Mon - Fri
+            </ion-text> 
+            <br>   
+             <ion-text class="boxgrey">
+              7:00am - 3:00pm
+            </ion-text>  
+          </div>
+        </ion-list>
+    </div> 
+    </ion-tab>
+    <!-- End of Staff page -->
+
+    <!-- Start of Inventory Page-->
+    <ion-tab tab="tab-inventory" component="page-map">
+      <div style="background-color: #E8E8F5; height: -webkit-fill-available;">
+
+      <ion-title color="dark boxin" class="ion-padding-vertical">Inventory</ion-title>
+      <ion-card class="box2">
+        <ion-card-header>
+          <ion-icon name="funnel" color="dark" class="boxfun ion-float-right"></ion-icon>
+          <ion-card-title color="light boxf">Item Overview</ion-card-title>
+          <ion-card-title color="light boxf ion-margin-bottom">Categories</ion-card-title>
+          <ion-text color="success" class="boxtoi ion-margin-end">Toiletries</ion-text>
+          <ion-text class="boxfnb">FNB</ion-text>
+        </ion-card-header>
+
+        <ion-list class="boxlist">
+          <ion-card-title class="boxf boxtit">Tea Packages</ion-card-title>
+            <ion-item>
+              <ion-card-title  class="boxf ion-float-left ion-margin-end">80%</ion-card-title>
+              <ion-progress-bar value="0.80" class="boxh" color="success"></ion-progress-bar>
+            </ion-item>
+
+          <ion-card-title class="boxf boxtit">Beverages</ion-card-title>
+            <ion-item>
+              <ion-card-title slot="start" class="boxf ion-float-left ion-margin-end">45%</ion-card-title>
+              <ion-progress-bar value="0.45" class="boxh" color="warning"></ion-progress-bar>
+            </ion-item>
+
+          <ion-card-title class="boxf boxtit">Peanuts</ion-card-title>
+            <ion-item>
+              <ion-card-title slot="start" class="boxf ion-float-left ion-margin-end">23%</ion-card-title>
+              <ion-progress-bar value="0.23" class="boxh" color="danger"></ion-progress-bar>
+            </ion-item>
+
+          <ion-card-title class="boxf boxtit">Crackers</ion-card-title>
+          <ion-item>
+            <ion-card-title  class="boxf ion-float-left ion-margin-end ion-margin-end">66%</ion-card-title>
+            <ion-progress-bar value="0.66" class="boxh" color="success"></ion-progress-bar>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+      </div>
+    </ion-tab>
+    <!-- End of Inventory Page-->
+
+    <!-- Start of Settings Page-->
+    <ion-tab tab="tab-settings">
+      <div style="background-color: #E8E8F5; height: -webkit-fill-available;">
+
+        <ion-title color="dark boxin" class="ion-padding-vertical">Settings</ion-title>
+        <ion-card class="box2">
+          <ion-card-header>
+            <ion-card-title color="light boxf">Credits</ion-card-title>
+          </ion-card-header>
+  
+          <ion-list class="boxlist">
+            <ion-card-title class="boxf boxtit">App Created by</ion-card-title>
+              <ion-item>
+                <ion-card-title class="boxf ion-float-left ion-margin-end">Low Bing Heng
+                  <br>
+                  Jovan Leong
+                  <br>
+                  Sim Joo Siang
+                  <br>
+                  Zen Lee
+                </ion-card-title>
+              </ion-item>
+              <ion-button color="main" expand="block" shape="round" class="card-w-btn" href="index.html">Log Out</ion-button>
+          </ion-list>
+                  
+              
+        </ion-card>
+        
+        </div>
+    </ion-tab>
+    <!-- End of Settings Page-->
+
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="tab-stats">
+          <ion-icon name="stats-chart"></ion-icon>
+          <ion-label>Stats</ion-label>
+        </ion-tab-button>
+    
+    
+        <ion-tab-button tab="tab-staff">
+          <ion-icon name="people"></ion-icon>
+          <ion-label>Staff</ion-label>
+        </ion-tab-button>
+    
+    
+        <ion-tab-button tab="tab-inventory">
+          <ion-icon name="checkbox"></ion-icon>
+          <ion-label>Inventory</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="tab-settings">
+          <ion-icon name="settings"></ion-icon>
+          <ion-label>Settings</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+  </ion-tabs>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'doughnut',
+
+    // The data for our dataset
+    data : {
+      //Room status labels
+      labels:[
+          'Occupied',
+          'Vacant',
+          'Cleaning'
+        ],
+      datasets: [{
+        //Data of room statuses
+        data: [10,20,30],
+        
+        //Colour of each room status
+        backgroundColor:[
+        '#0000A5',
+        '#EB445A',
+        '#FFC409'
+        ],
+        }],
+    },
+
+    // Configuration options go here
+    options: {}
+});
+  </script>
+</body>
+</html>
+
+      <!-- 
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>Item Overview</ion-card-title>
+                <ion-card-title>Categories</ion-card-title>
+                <ion-button color="success">Filter</ion-button>
+                <ion-button color="success">Filter</ion-button>
+            </ion-card-header>
+
+            Toiletries list
+            <ion-list>
+                <ion-item>
+                    <ion-label>
+                      <h2>Toothbrush</h2>
+                      <h2 slot="start">80%</h2>
+                      <ion-progress-bar value="0.5"></ion-progress-bar>
+                    </ion-label>  
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                      <h2>Soap</h2>
+                      <h2 slot="start">80%</h2>
+                      <ion-progress-bar value="0.5"></ion-progress-bar>
+                    </ion-label>  
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                      <h2>Towels</h2>
+                      <h2 slot="start">80%</h2>
+                      <ion-progress-bar value="0.5"></ion-progress-bar>
+                    </ion-label>  
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                      <h2>Toilet Paper</h2>
+                      <h2 slot="start">80%</h2>
+                      <ion-progress-bar value="0.5"></ion-progress-bar>
+                    </ion-label>  
+                </ion-item>
+            </ion-list>
+
+            FNB list
+            <ion-list>
+                <ion-item>
+                    <ion-label>
+                      <h2>Coffee Packets</h2>
+                      <h2 slot="start">80%</h2>
+                      <ion-progress-bar value="0.5"></ion-progress-bar>
+                    </ion-label>  
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                      <h2>Tea Packets</h2>
+                      <h2 slot="start">80%</h2>
+                      <ion-progress-bar value="0.5"></ion-progress-bar>
+                    </ion-label>  
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                      <h2>Canned Beverages</h2>
+                      <h2 slot="start">80%</h2>
+                      <ion-progress-bar value="0.5"></ion-progress-bar>
+                    </ion-label>  
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                      <h2>Peanuts</h2>
+                      <h2 slot="start">80%</h2>
+                      <ion-progress-bar value="0.5"></ion-progress-bar>
+                    </ion-label>  
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                      <h2>Crackers</h2>
+                      <h2 slot="start">80%</h2>
+                      <ion-progress-bar value="0.5"></ion-progress-bar>
+                    </ion-label>  
+                </ion-item>
+            </ion-list>
+        </ion-card> -->
