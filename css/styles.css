@@ -195,3 +195,9 @@ body
     margin-left: 5%;
     font-size: 20px;
 }
+
+/*Stats page css*/
+#doughChart {
+    margin: 5% 0% 55% 0;
+    
+}
