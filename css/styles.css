@@ -1,0 +1,140 @@
+
+/*Adding Main to Ionic based on colour scheme*/
+:root {
+    --ion-color-main: #0000a5;
+    --ion-color-main-rgb: 0,0,65;
+    --ion-color-main-contrast: #ffffff;
+    --ion-color-main-contrast-rgb: 255,255,255;
+    --ion-color-main-shade: #3434bd;
+    --ion-color-main-tint: #000085;
+}
+
+.ion-color-main {
+    --ion-color-base: var(--ion-color-main);
+    --ion-color-base-rgb: var(--ion-color-main-rgb);
+    --ion-color-contrast: var(--ion-color-main-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-main-contrast-rgb);
+    --ion-color-shade: var(--ion-color-main-shade);
+    --ion-color-tint: var(--ion-color-main-tint);
+}
+/*Universal Settings*/
+*{
+    font-family: 'Poppins', sans-serif;  
+}
+
+body
+{
+    background-color: #E8EBF5;
+    margin: 0%;
+    padding: 0%;
+}
+
+.blue-crd-hd {
+    background-color: #0000A5;
+    border-radius: 15px;
+}
+
+.txt-header{
+    font-size: 35px;
+    font-weight: bolder;
+    padding-bottom: 0;
+    display: inline-block;
+}
+/*Index / Login Page*/
+
+
+.boxsearch{
+    background: #0000a5;
+    color: white;
+    padding: 10px 31px;
+    border-radius: 21px;
+    font-size: 20px;
+    margin: 25px 20px 0;
+}
+
+.card-title-margl{
+    margin-left: 16px;
+}
+
+.prog-bar{
+    height: 10px;
+    border-radius: 15px;
+}
+
+/*require updating html itself*/
+.box {
+    border-color: #0000A5;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 11px;
+    margin-bottom: 30px;
+    height: 50px;
+    background-color: #0000A5;
+}
+.box1 {
+    border-color: #0000A5;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 11px;
+    height: 50px
+}
+
+.boxcw{
+    background-color: white;
+    margin: 10px 10px 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.boxis{
+    margin-right: 10%;   
+   }
+
+.box11{
+font-size: 11px;
+}
+/*end of require updating html itself*/
+
+
+
+.stff-hdr{
+    color: #0000a5;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.grey-txt{
+    color: grey;
+    font-weight: bold;
+}
+
+
+
+.card-w-btn{
+    width: 90%;
+    height: 10%;
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+/*Stats page css*/
+#doughChart {
+    margin: 5% 0% 55% 0;
+    
+}
+
+/*Inventory Page*/
+
+/*Categories button for inventory card*/
+.inv-cat-btn{
+    width: 35%;
+    
+    /*gradient of btns
+    /*background-image: linear-gradient(#2020FF,#000053);*/
+}
+
+.item-low-alert{
+    --backdrop-opacity: 80%;
+    border-color: #EB445A;
+    border-radius: 10px;
+}
