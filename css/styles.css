@@ -1,140 +1,220 @@
-
 /*Adding Main to Ionic based on colour scheme*/
 :root {
-    --ion-color-main: #0000a5;
-    --ion-color-main-rgb: 0,0,65;
-    --ion-color-main-contrast: #ffffff;
-    --ion-color-main-contrast-rgb: 255,255,255;
-    --ion-color-main-shade: #3434bd;
-    --ion-color-main-tint: #000085;
+  /*Main Primary Colour*/
+  --ion-color-main: #0000a5;
+  --ion-color-main-rgb: 0, 0, 65;
+  --ion-color-main-contrast: #ffffff;
+  --ion-color-main-contrast-rgb: 255, 255, 255;
+  --ion-color-main-shade: #3434bd;
+  --ion-color-main-tint: #000085;
 }
 
 .ion-color-main {
-    --ion-color-base: var(--ion-color-main);
-    --ion-color-base-rgb: var(--ion-color-main-rgb);
-    --ion-color-contrast: var(--ion-color-main-contrast);
-    --ion-color-contrast-rgb: var(--ion-color-main-contrast-rgb);
-    --ion-color-shade: var(--ion-color-main-shade);
-    --ion-color-tint: var(--ion-color-main-tint);
+  --ion-color-base: var(--ion-color-main);
+  --ion-color-base-rgb: var(--ion-color-main-rgb);
+  --ion-color-contrast: var(--ion-color-main-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-main-contrast-rgb);
+  --ion-color-shade: var(--ion-color-main-shade);
+  --ion-color-tint: var(--ion-color-main-tint);
 }
 /*Universal Settings*/
-*{
-    font-family: 'Poppins', sans-serif;  
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-body
-{
-    background-color: #E8EBF5;
-    margin: 0%;
-    padding: 0%;
+body {
+  background-color: #e8ebf5;
+  margin: 0%;
+  padding: 0%;
 }
 
 .blue-crd-hd {
-    background-color: #0000A5;
-    border-radius: 15px;
+  background-color: #0000a5;
+  border-radius: 15px;
 }
 
-.txt-header{
-    font-size: 35px;
-    font-weight: bolder;
-    padding-bottom: 0;
-    display: inline-block;
+
+
+.txt-head {
+  font-size: 35px;
+  font-weight: 700;
+  padding-bottom: 0;
+  display: inline-block;
+}
+
+.txt-sub-head {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.txt-body {
+  font-weight: 500;
+}
+
+.lighttxt {
+  color: #d9f0f2;
+}
+
+.darktxt {
+  color: #171c27;
 }
 /*Index / Login Page*/
 
-
-.boxsearch{
-    background: #0000a5;
-    color: white;
-    padding: 10px 31px;
-    border-radius: 21px;
-    font-size: 20px;
-    margin: 25px 20px 0;
+.boxsearch {
+  background: #0000a5;
+  color: white;
+  padding: 10px 31px;
+  border-radius: 21px;
+  font-size: 20px;
+  margin: 25px 20px 0;
 }
 
-.card-title-margl{
-    margin-left: 16px;
+.card-title-margl {
+  margin-left: 16px;
 }
 
-.prog-bar{
-    height: 10px;
-    border-radius: 15px;
+.prog-bar {
+  height: 10px;
+  border-radius: 15px;
 }
 
 /*require updating html itself*/
 .box {
-    border-color: #0000A5;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 11px;
-    margin-bottom: 30px;
-    height: 50px;
-    background-color: #0000A5;
+  border-color: #0000a5;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 11px;
+  margin-bottom: 30px;
+  height: 50px;
+  background-color: #0000a5;
 }
 .box1 {
-    border-color: #0000A5;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 11px;
-    height: 50px
+  border-color: #0000a5;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 11px;
+  height: 50px;
 }
 
-.boxcw{
-    background-color: white;
-    margin: 10px 10px 20px;
-    padding: 10px 20px;
-    border-radius: 15px;
+.boxcw {
+  background-color: white;
+  margin: 10px 10px 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
 }
 
-.boxis{
-    margin-right: 10%;   
-   }
+.boxis {
+  margin-right: 10%;
+}
 
-.box11{
-font-size: 11px;
+.box11 {
+  font-size: 11px;
 }
 /*end of require updating html itself*/
 
-
-
-.stff-hdr{
-    color: #0000a5;
-    font-size: 18px;
-    font-weight: bold;
+.stff-hdr {
+  color: #0000a5;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.grey-txt{
-    color: grey;
-    font-weight: bold;
+.grey-txt {
+  color: #171C27;
+  font-weight: bold;
 }
 
-
-
-.card-w-btn{
-    width: 90%;
-    height: 10%;
-    margin-left: 5%;
-    font-size: 20px;
+.card-w-btn {
+  width: 90%;
+  height: 10%;
+  margin-left: 5%;
+  font-size: 20px;
 }
 
 /*Stats page css*/
 #doughChart {
-    margin: 5% 0% 55% 0;
-    
+  margin: 5% 0% 55% 0;
 }
+
+/*Staff Page*/
+.staff-searchbar{
+  --border-radius: 10px;
+  --icon-color: #0000a5;
+  
+}
+
+.staff-card{
+  border-radius: 15px;
+}
+
 
 /*Inventory Page*/
 
 /*Categories button for inventory card*/
-.inv-cat-btn{
-    width: 35%;
-    
-    /*gradient of btns
-    /*background-image: linear-gradient(#2020FF,#000053);*/
+.inv-cat-btn {
+  width: 35%;
+
+  /*gradient of btns
+  /*background-image: linear-gradient(#2020FF,#000053);*/
 }
 
-.item-low-alert{
-    --backdrop-opacity: 80%;
-    border-color: #EB445A;
-    border-radius: 10px;
+.item-low-alert {
+  --backdrop-opacity: 80%;
+  --min-width: 80%;
+  --min-height: 50%;
+  border-color: #eb445a;
+}
+
+/*alert card settings*/
+.alert-wrapper{
+  border-radius: 200%;
+  border-width: 100px;
+}
+
+
+.alert-head {
+  background-color: #EB445A;
+}
+
+/*Card header text*/ 
+/*Issue where alert-(n)-hdr where n is dependent on number of times card has been created
+Targetting class does not affect item
+*/
+#alert-1-hdr{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.alert-title{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#alert-1-sub-hdr{
+  color: white;
+  font-style: italic;
+}
+
+#alert-1-msg{
+  margin-top: 5%;
+  font-size: 20px;
+  color: #171C27;
+}
+
+/*Alert card button*/
+.alert-button-group{
+  margin-top: 70%;
+  background-color: #EB445A;
+}
+
+.alert-button-inner{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*Settings page*/
+.logout-btn{
+  height: 25%;
 }

@@ -1,188 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!--CSS styles-->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Hintel App</title>
-</head>
-<!--===========================================================-->
-<body>
-  <ion-tabs>
-    <!-- Start of Stats Page-->
-    <ion-tab tab="tab-stats">
-    
-      <div >
-        
-        <!--Header-->
-        <ion-label>
-          <ion-title color="dark txt-header" class="ion-padding-vertical">Stats</ion-title>
-        </ion-label>
-        
-        <!--Start of Expenses Card-->
+  </head>
+  <!--===========================================================-->
+  <body>
+    <ion-tabs>
+      <!-- Start of Stats Page-->
+      <ion-tab tab="tab-stats">
+        <div>
+          <!--Header-->
+          <ion-label>
+            <ion-title color="dark txt-head" class="ion-padding-vertical"
+              >Stats</ion-title
+            >
+          </ion-label>
+
+          <!--Start of Expenses Card-->
+          <ion-card class="blue-crd-hd">
+            <ion-card-header>
+              <ion-card-title color="light" class="txt-sub-head lighttxt"
+                >Expenses</ion-card-title
+              >
+            </ion-card-header>
+            <ion-list class="">
+              <!--Chart JS Graph chart-->
+              <canvas id="expenseChart"></canvas>
+            </ion-list>
+          </ion-card>
+        </div>
+
+        <!--Start of Room Status Card-->
         <ion-card class="blue-crd-hd">
           <ion-card-header>
-            <ion-card-title color="light ">Expenses</ion-card-title>
-          </ion-card-header>
-          <ion-list class="">
-            <!--Chart JS Graph chart-->
-            <canvas id="expenseChart"></canvas>
-          </ion-list>
-        </ion-card>
-      </div>
-      
-      <!--Start of Room Status Card-->
-        <ion-card class="blue-crd-hd">
-          <ion-card-header>
-            <ion-card-title color="light ">Room Status</ion-card-title>
+            <ion-card-title color="light" class="txt-sub-head lighttxt"
+              >Room Status</ion-card-title
+            >
           </ion-card-header>
 
           <ion-list class="">
-
-          <!--Chart JS doughnut chart-->
-          <canvas id="doughChart"></canvas>
+            <!--Chart JS doughnut chart-->
+            <canvas id="doughChart"></canvas>
           </ion-list>
         </ion-card>
-        
-    </ion-tab>
-    <!-- End of Stats Page-->
-    <!--===========================================================-->
+      </ion-tab>
+      <!-- End of Stats Page-->
+      <!--===========================================================-->
 
-    <!-- Start of Staff page -->
-    <ion-tab tab="tab-staff">
-      <div>
-        <ion-label>
-         <ion-title color="dark txt-header" class="ion-padding-vertical">Staff</ion-title>
-         <ion-icon name="search-outline" class="boxsearch ion-float-right"></ion-icon>
-        </ion-label>  
-        <ion-list class="boxcw">
-        <ion-label class="ion-float-left boxis">
-          <img src="img/icon.png" style="width: auto;">
-            <br>
-            <ion-toggle color="success" checked></ion-toggle>
-        </ion-label>
+      <!-- Start of Staff page -->
+      <ion-tab tab="tab-staff">
+          <ion-label>
+            <ion-title color="dark " class="ion-padding-vertical txt-head"
+              >Staff</ion-title
+            >
+            <!--<ion-icon
+              name="search-outline"
+              class="boxsearch ion-float-right"
+            ></ion-icon>-->
+            <ion-searchbar show-cancel-button="focus" class="staff-searchbar"></ion-searchbar>
+            <ion-card class="staff-card">
+              <ion-list class="boxcw">
+                <ion-label class="ion-float-left boxis">
+                  <img src="img/icon.png" style="width: auto" />
+                  <br />
+                  <ion-toggle color="success" checked></ion-toggle>
+                </ion-label>
+                  <ion-text class="stff-hdr"> Nicole Simmonss </ion-text>
+                  <br />
+                  <ion-text class="grey-txt box11"> Concierge </ion-text>
+                  <br />
+                  <ion-text class="grey-txt"> Mon - Fri </ion-text>
+                  <br />
+                  <ion-text class="grey-txt"> 7:00am - 3:00pm </ion-text>
+              </ion-list>
+            </ion-card>
+            <ion-card class="staff-card">
+              <ion-list class="boxcw">
+                <ion-label class="ion-float-left boxis">
+                  <img src="img/icon.png" style="width: auto" />
+                  <br />
+                  <ion-toggle color="success" checked></ion-toggle>
+                </ion-label>
+                  <ion-text class="stff-hdr"> Nicole Simmonss </ion-text>
+                  <br />
+                  <ion-text class="grey-txt box11"> Concierge </ion-text>
+                  <br />
+                  <ion-text class="grey-txt"> Mon - Fri </ion-text>
+                  <br />
+                  <ion-text class="grey-txt"> 7:00am - 3:00pm </ion-text>
+              </ion-list>
+            </ion-card>
+          </ion-label>
+          <!--Search bar for searching specific staff-->
           <div>
-            <ion-text class="stff-hdr">
-              Nicole Simmonss
-            </ion-text>
-            <br>
-            <ion-text class="grey-txt box11">
-              Concierge
-            </ion-text>
-            <br>
-             <ion-text class="grey-txt">
-              Mon - Fri
-            </ion-text> 
-            <br>   
-             <ion-text class="grey-txt">
-              7:00am - 3:00pm
-            </ion-text>  
+            
           </div>
-        </ion-list>
-    </div> 
-    </ion-tab>
-    <!-- End of Staff page -->
-    <!--===========================================================-->
-    <!-- Start of Inventory Page-->
-    <ion-tab tab="tab-inventory" >
-      <div >
-      
-         
-      <ion-title color="dark txt-header" class="ion-padding-vertical">Inventory</ion-title>
-      <ion-card class="blue-crd-hd">
-        <ion-card-header>
-          <ion-icon name="funnel" color="dark" class="un ion-float-right"></ion-icon>
-          <ion-card-title color="light ">Item Overview</ion-card-title>
-          <ion-card-title color="light  ion-margin-bottom">Categories</ion-card-title>
-          <ion-button color="light" shape="round" class="inv-cat-btn" id="toilet-btn">Toiletries</ion-button>
-          <ion-button color="light" shape="round" class="inv-cat-btn" id="fnb-btn">FNB</ion-button>
-        </ion-card-header>
-        <!--Categories buttons-->
-        <ion-list class="" id="toilet-ctn">
-          <ion-card-title class=" card-title-margl">Ice Packages</ion-card-title>
-          <ion-item>
-            <ion-card-title class=" ion-float-left ion-margin-end">80%</ion-card-title>
-            <ion-progress-bar value="0.80" class="prog-bar" color="success"></ion-progress-bar>
-          </ion-item>
-          <ion-card-title class=" card-title-margl">Beverages</ion-card-title>
-          <ion-item>
-            <ion-card-title slot="start" class=" ion-float-left ion-margin-end">45%</ion-card-title>
-            <ion-progress-bar value="0.45" class="prog-bar" color="warning"></ion-progress-bar>
-          </ion-item>
-          <ion-card-title class=" card-title-margl">Peanuts</ion-card-title>
-          <ion-item>
-            <ion-card-title slot="start" class=" ion-float-left ion-margin-end">23%</ion-card-title>
-            <ion-progress-bar value="0.23" class="prog-bar" color="danger"></ion-progress-bar>
-          </ion-item>
-          <ion-card-title class=" card-title-margl">Crackers</ion-card-title>
-          <ion-item>
-            <ion-card-title class=" ion-float-left ion-margin-end ion-margin-end">66%</ion-card-title>
-            <ion-progress-bar value="0.66" class="prog-bar" color="success"></ion-progress-bar>
-          </ion-item>
-        </ion-list>
-        <ion-list class="" id="fnb-ctn">
-          <ion-card-title class=" card-title-margl">Tea Packages</ion-card-title>
-            <ion-item>
-              <ion-card-title  class=" ion-float-left ion-margin-end">80%</ion-card-title>
-              <ion-progress-bar value="0.80" class="prog-bar" color="success"></ion-progress-bar>
-            </ion-item>
-
-          <ion-card-title class=" card-title-margl">Beverages</ion-card-title>
-            <ion-item>
-              <ion-card-title slot="start" class=" ion-float-left ion-margin-end">45%</ion-card-title>
-              <ion-progress-bar value="0.45" class="prog-bar" color="warning"></ion-progress-bar>
-            </ion-item>
-
-          <ion-card-title class=" card-title-margl">Peanuts</ion-card-title>
-            <ion-item>
-              <ion-card-title slot="start" class=" ion-float-left ion-margin-end">23%</ion-card-title>
-              <ion-progress-bar value="0.23" class="prog-bar" color="danger"></ion-progress-bar>
-            </ion-item>
-
-          <ion-card-title class=" card-title-margl">Crackers</ion-card-title>
-          <ion-item>
-            <ion-card-title  class=" ion-float-left ion-margin-end ion-margin-end">66%</ion-card-title>
-            <ion-progress-bar value="0.66" class="prog-bar" color="success"></ion-progress-bar>
-          </ion-item>
-        </ion-list>
-        </ion-card>
-      </div>
-    </ion-tab>
-    <!-- End of Inventory Page-->
-    <!--===========================================================-->
-    <!-- Start of Settings Page-->
-    <ion-tab tab="tab-settings">
-      <div>
-        <ion-title color="dark txt-header" class="ion-padding-vertical">Settings</ion-title>
-        <ion-card class="blue-crd-hd">
-          <ion-card-header>
-            <ion-card-title color="light ">Credits</ion-card-title>
-          </ion-card-header>
-          <ion-list class="">
-            <ion-card-title class=" card-title-margl">App Created by</ion-card-title>
+        
+        
+      </ion-tab>
+      <!-- End of Staff page -->
+      <!--===========================================================-->
+      <!-- Start of Inventory Page-->
+      <ion-tab tab="tab-inventory">
+        <div>
+          <ion-title color="dark txt-head" class="ion-padding-vertical txt-head"
+            >Inventory</ion-title
+          >
+          <ion-card class="blue-crd-hd">
+            <ion-card-header>
+              <ion-icon
+                name="funnel"
+                color="dark"
+                class="un ion-float-right"
+              ></ion-icon>
+              <ion-card-title color="light" class="txt-sub-head lighttxt"
+                >Item Overview</ion-card-title
+              >
+              <ion-card-title
+                color="light ion-margin-bottom"
+                class="txt-sub-head lighttxt"
+                >Categories</ion-card-title
+              >
+              <ion-button
+                color="light"
+                shape="round"
+                class="inv-cat-btn"
+                id="toilet-btn"
+                >Toiletries</ion-button
+              >
+              <ion-button
+                color="light"
+                shape="round"
+                class="inv-cat-btn"
+                id="fnb-btn"
+                >FNB</ion-button
+              >
+            </ion-card-header>
+            <!--Categories buttons-->
+            <ion-list class="" id="toilet-ctn">
+              <ion-card-title class="card-title-margl"
+                >Ice Packages</ion-card-title
+              >
               <ion-item>
-                <ion-card-title class=" ion-float-left ion-margin-end">Low Bing Heng
-                  <br>
-                  Jovan Leong
-                  <br>
-                  Sim Joo Siang
-                  <br>
-                  Zen Lee
+                <ion-card-title
+                  class="ion-float-left ion-margin-end txt-sub-head"
+                  >80%</ion-card-title
+                >
+                <ion-progress-bar
+                  value="0.80"
+                  class="prog-bar"
+                  color="success"
+                ></ion-progress-bar>
+              </ion-item>
+              <ion-card-title class="card-title-margl"
+                >Beverages</ion-card-title
+              >
+              <ion-item>
+                <ion-card-title
+                  slot="start"
+                  class="ion-float-left ion-margin-end txt-sub-head"
+                  >45%</ion-card-title
+                >
+                <ion-progress-bar
+                  value="0.45"
+                  class="prog-bar"
+                  color="warning"
+                ></ion-progress-bar>
+              </ion-item>
+              <ion-card-title class="card-title-margl">Peanuts</ion-card-title>
+              <ion-item>
+                <ion-card-title
+                  slot="start"
+                  class="ion-float-left ion-margin-end txt-sub-head"
+                  >23%</ion-card-title
+                >
+                <ion-progress-bar
+                  value="0.23"
+                  class="prog-bar"
+                  color="danger"
+                ></ion-progress-bar>
+              </ion-item>
+              <ion-card-title class="card-title-margl">Crackers</ion-card-title>
+              <ion-item>
+                <ion-card-title
+                  class="ion-float-left ion-margin-end ion-margin-end txt-sub-head"
+                  >66%</ion-card-title
+                >
+                <ion-progress-bar
+                  value="0.66"
+                  class="prog-bar"
+                  color="success"
+                ></ion-progress-bar>
+              </ion-item>
+            </ion-list>
+            <!--Start of FNB container-->
+            <ion-list class="" id="fnb-ctn">
+              <ion-card-title class="card-title-margl"
+                >Tea Packages</ion-card-title
+              >
+              <ion-item>
+                <ion-card-title
+                  class="ion-float-left ion-margin-end txt-sub-head"
+                  >80%</ion-card-title
+                >
+                <ion-progress-bar
+                  value="0.80"
+                  class="prog-bar"
+                  color="success"
+                ></ion-progress-bar>
+              </ion-item>
+
+              <ion-card-title class="card-title-margl"
+                >Beverages</ion-card-title
+              >
+              <ion-item>
+                <ion-card-title
+                  slot="start"
+                  class="ion-float-left ion-margin-end txt-sub-head"
+                  >45%</ion-card-title
+                >
+                <ion-progress-bar
+                  value="0.45"
+                  class="prog-bar"
+                  color="warning"
+                ></ion-progress-bar>
+              </ion-item>
+
+              <ion-card-title class="card-title-margl">Peanuts</ion-card-title>
+              <ion-item>
+                <ion-card-title
+                  slot="start"
+                  class="ion-float-left ion-margin-end txt-sub-head"
+                  >23%</ion-card-title
+                >
+                <ion-progress-bar
+                  value="0.23"
+                  class="prog-bar"
+                  color="danger"
+                ></ion-progress-bar>
+              </ion-item>
+
+              <ion-card-title class="card-title-margl">Crackers</ion-card-title>
+              <ion-item>
+                <ion-card-title
+                  class="ion-float-left ion-margin-end ion-margin-end txt-sub-head"
+                  >66%</ion-card-title
+                >
+                <ion-progress-bar
+                  value="0.66"
+                  class="prog-bar"
+                  color="success"
+                ></ion-progress-bar>
+              </ion-item>
+            </ion-list>
+          </ion-card>
+        </div>
+      </ion-tab>
+      <!-- End of Inventory Page-->
+      <!--===========================================================-->
+      <!-- Start of Settings Page-->
+      <ion-tab tab="tab-settings">
+        <div>
+          <ion-title color="dark txt-head" class="ion-padding-vertical"
+            >Settings</ion-title
+          >
+          <ion-card class="blue-crd-hd">
+            <ion-card-header>
+              <ion-card-title color="light" class="txt-sub-head lighttxt">App Made By</ion-card-title>
+            </ion-card-header>
+            <ion-list class="">
+              <ion-item>
+                <ion-card-title class="ion-float-left ion-margin-end"
+                  >Table Bois
                 </ion-card-title>
               </ion-item>
-              <ion-button color="main" expand="block" shape="round" class="card-w-btn" href="index.html">Log Out</ion-button>
-          </ion-list>   
-        </ion-card>
+              
+            </ion-list>
+          </ion-card>
+          <ion-button
+                color="main"
+                expand="block"
+                shape="round"
+                class="card-w-btn logout-btn"
+                href="index.html"
+                >Log Out</ion-button
+              >
+          
         </div>
-    </ion-tab>
-    <!-- End of Settings Page-->
-    <!--Start of Btm Nav Bar-->
+      </ion-tab>
+      <!-- End of Settings Page-->
+      <!--Start of Btm Nav Bar-->
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="tab-stats">
           <ion-icon name="stats-chart"></ion-icon>
@@ -201,17 +330,18 @@
           <ion-label>Settings</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
-  </ion-tabs>
-  <!--End of Btm Nav Bar-->
+    </ion-tabs>
+    <!--End of Btm Nav Bar-->
 
-  <!--Script behaviour for Chart JS-->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <!--JQuery CDN-->
-  <script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-  <!--JS file-->
-  <script src="./js/myapp.js"></script>
-</body>
+    <!--Script behaviour for Chart JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!--JQuery CDN-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!--JS file-->
+    <script src="./js/myapp.js"></script>
+  </body>
 </html>

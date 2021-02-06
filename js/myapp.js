@@ -23,11 +23,10 @@ document.getElementById('toilet-btn').onclick = function() {
   if(toiletCtn.is(':hidden')){
     toiletCtn.show();
     fnbCtn.hide();
-    itemLowAlert();
   }
 };
 
-/*function itemLowAlert() {
+function itemLowAlert() {
   const alert = document.createElement('ion-alert');
   alert.cssClass = 'item-low-alert';
   alert.header = 'Item Count Low';
@@ -37,12 +36,12 @@ document.getElementById('toilet-btn').onclick = function() {
 
   document.body.appendChild(alert);
   return alert.present();
-}*/
-
+}
+/*
 function itemLowAlert(){
   const alert = document.createElement('item-low-alert');
   
-}
+}*/
 //End Of Inventory Page
 //--------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------
