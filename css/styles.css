@@ -1,4 +1,4 @@
-/*Adding Main to Ionic based on colour scheme*/
+/*Adding Additional colours to Ionic based on colour scheme*/
 :root {
   /*Main Primary Colour*/
   --ion-color-main: #0000a5;
@@ -7,6 +7,14 @@
   --ion-color-main-contrast-rgb: 255, 255, 255;
   --ion-color-main-shade: #3434bd;
   --ion-color-main-tint: #000085;
+
+  /*Navbar Primary Colour*/
+  --ion-color-nav: #ffffff;
+  --ion-color-nav-rgb: 255, 255, 255;
+  --ion-color-nav-contrast: #171C27;
+  --ion-color-nav-contrast-rgb: 23, 28, 39;
+  --ion-color-main-shade: #C2C2C2;
+  --ion-color-main-tint: #C2C2C2;
 }
 
 .ion-color-main {
@@ -17,6 +25,16 @@
   --ion-color-shade: var(--ion-color-main-shade);
   --ion-color-tint: var(--ion-color-main-tint);
 }
+
+.ion-color-nav {
+  --ion-color-base: var(--ion-color-nav);
+  --ion-color-base-rgb: var(--ion-color-nav-rgb);
+  --ion-color-contrast: var(--ion-color-nav-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-nav-contrast-rgb);
+  --ion-color-shade: var(--ion-color-nav-shade);
+  --ion-color-tint: var(--ion-color-nav-tint);
+}
+
 /*Universal Settings*/
 * {
   font-family: "Poppins", sans-serif;
@@ -33,7 +51,16 @@ body {
   border-radius: 15px;
 }
 
+.card-w-btn {
+  width: 90%;
+  height: 10%;
+  margin-left: 5%;
+  font-size: 20px;
+}
 
+.card-title-margl {
+  margin-left: 16px;
+}
 
 .txt-head {
   font-size: 35px;
@@ -55,29 +82,11 @@ body {
   color: #d9f0f2;
 }
 
-.darktxt {
-  color: #171c27;
+.grey-txt {
+  color: #171C27;
 }
+
 /*Index / Login Page*/
-
-.boxsearch {
-  background: #0000a5;
-  color: white;
-  padding: 10px 31px;
-  border-radius: 21px;
-  font-size: 20px;
-  margin: 25px 20px 0;
-}
-
-.card-title-margl {
-  margin-left: 16px;
-}
-
-.prog-bar {
-  height: 10px;
-  border-radius: 15px;
-}
-
 /*require updating html itself*/
 .box {
   border-color: #0000a5;
@@ -105,37 +114,46 @@ body {
 
 .boxis {
   margin-right: 10%;
-}
-
-.box11 {
-  font-size: 11px;
+  margin-top: 2%;
 }
 /*end of require updating html itself*/
 
-.stff-hdr {
-  color: #0000a5;
-  font-size: 18px;
-  font-weight: bold;
+/*Start of stats page*/
+#expenseChart{
+  margin: 10% 0% 5% 0%;
 }
 
-.grey-txt {
-  color: #171C27;
-  font-weight: bold;
-}
-
-.card-w-btn {
-  width: 90%;
-  height: 10%;
-  margin-left: 5%;
-  font-size: 20px;
-}
-
-/*Stats page css*/
 #doughChart {
-  margin: 5% 0% 55% 0;
+  margin: 5% 0% 5% 0%;
 }
 
-/*Staff Page*/
+/*Start of staff page*/
+.staff-hdr {
+  color: #0000a5;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.staff-mini {
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.staff-body {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.boxsearch {
+  background: #0000a5;
+  color: white;
+  padding: 10px 31px;
+  border-radius: 21px;
+  font-size: 20px;
+  margin: 25px 20px 0;
+}
+
 .staff-searchbar{
   --border-radius: 10px;
   --icon-color: #0000a5;
@@ -146,18 +164,24 @@ body {
   border-radius: 15px;
 }
 
-
-/*Inventory Page*/
-
+/*Start of inventory page*/
 /*Categories button for inventory card*/
 .inv-cat-btn {
   width: 35%;
-
   /*gradient of btns
   /*background-image: linear-gradient(#2020FF,#000053);*/
 }
 
-.item-low-alert {
+.inv-sub-txt{
+  font-size: 20px;
+}
+
+.prog-bar {
+  height: 10px;
+  border-radius: 15px;
+}
+
+.alert-card {
   --backdrop-opacity: 80%;
   --min-width: 80%;
   --min-height: 50%;
@@ -214,7 +238,12 @@ Targetting class does not affect item
   font-weight: bold;
 }
 
-/*Settings page*/
+/*Start of Settings page*/
 .logout-btn{
-  height: 25%;
+  height: 12%;
+}
+
+.setting-img{
+  background-color: white;
+  transform: scale(0.7, 0.7);
 }

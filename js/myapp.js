@@ -28,11 +28,38 @@ document.getElementById('toilet-btn').onclick = function() {
 
 function itemLowAlert() {
   const alert = document.createElement('ion-alert');
-  alert.cssClass = 'item-low-alert';
+  alert.cssClass = 'alert-card';
   alert.header = 'Item Count Low';
   alert.subHeader = 'Following items are running low';
   alert.message = 'items running low';
   alert.buttons = ['Got It!'];
+
+  document.body.appendChild(alert);
+  return alert.present();
+};
+
+function logOutAlert() {
+  const alert = document.createElement('ion-alert');
+  alert.cssClass = 'alert-card';
+  alert.header = 'Log Out Alert';
+  alert.subHeader = 'Do you want to log out?';
+  alert.message = 'items running low';
+  alert.buttons = [
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      cssClass: 'secondary',
+      handler: () => {
+        console.log('Confirm Cancel')
+      }
+    }, {
+      text: 'Log Out',
+      handler: () => {
+        console.log('Confirm Ok')
+        location.href = "index.html"
+      }
+    }
+  ];
 
   document.body.appendChild(alert);
   return alert.present();
@@ -74,7 +101,7 @@ var echart = new Chart(xtx, {
   options: {
     //customise legend details
     legend: {
-      position: "right",
+      position: "bottom",
 
       labels: {
         fontSize: 20,
