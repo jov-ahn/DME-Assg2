@@ -1,8 +1,4 @@
 # DME Assignment 2 Hintel App
-
-One or two paragraphs providing an overview of your project. Tell us about your project.
-
-Essentially, this part is your sales pitch.
  
 ## Design Process
  
@@ -17,24 +13,37 @@ Include the Adobe XD wireframe as a folder. You can include the XD share url.
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+- Allows reading of expenses statistics, including profits & losses
+- Allows reading of hotel room statuses, such as occupied, empty or cleaning
+- Allows reading of staff list, including their name, role and work hours
+- Allows reading of inventory item count, categorised into Toiletries & Food & Beverages ( FNB )
+- Be alerted whenever a certain item is running low in inventory count
+- Securely Log In & Out with a customised username & password
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Allows reading of expenses statistics, including profits & losses
+- Allows reading of hotel room statuses, such as occupied, empty or cleaning
+- Allows reading of staff list, including their name, role and work hours
+- Allows reading of inventory item count, categorised into Toiletries & Food & Beverages ( FNB )
+- Be alerted whenever a certain item is running low in inventory count
+- Securely Log In & Out with a customised username & password
 
 ### Features Left to Implement
-- Another feature idea
+- Be able to Create, Update & Delete all data such as inventory item count & staff list that synchronises with database / api
 
 ## Technologies Used
-
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
+- [HTML](https://html.com/)
+    - The project uses **HTML** to create the app's structure.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+    - The project uses **CSS** to design, describe & present our unique and attractive app design.
+- [JavaScript](https://www.javascript.com/)
+    - The project uses **JavaScript** to define behaviours of buttons, linking data from databases & API.
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
-
+- [Ionic](https://ionicframework.com/)
+    - The project uses **Ionic** to create & customise pre-defined assests designed for mobile phones that allow for better quality of life.
+- [Chart.JS](https://www.chartjs.org/)
+    - The project uses **ChartJS** to create & customise charts such as doughnut and bar chart.
 
 ## Testing
 
@@ -48,11 +57,19 @@ For any scenarios that have not been automated, test the user stories manually a
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+You should also mention in this section any interesting bugs or problems y ou discovered during your testing, even if you haven't addressed them yet.
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Credits
+- Bing Heng
+- Jovan
+- Joo Siang
+- 
+- Sean
+- Zen
+
+
 
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
@@ -61,5 +78,7 @@ If this section grows too long, you may want to split it off into a separate fil
 - The photos used in this site were obtained from ...
 
 ### Acknowledgements
+- I received inspiration for this project from X
 
+### Acknowledgements
 - I received inspiration for this project from X
