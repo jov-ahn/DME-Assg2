@@ -75,7 +75,7 @@ For any scenarios that have not been automated, test the user stories manually a
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 ## Screen Size
 
-This app was designed using [Google Pixel 4 / 4XL](https://store.google.com/gb/category/phones?srp=/gb/product/pixel_4_specs)
+This app was designed using [Google Pixel 4 / 4XL] as a reference point(https://store.google.com/gb/category/phones?srp=/gb/product/pixel_4_specs)
    - Build with Android Components ( Ionic )
    - Build for Android Devices ( APK )
    - **Portrait** 
@@ -89,7 +89,7 @@ This app was designed using [Google Pixel 4 / 4XL](https://store.google.com/gb/c
 - Bing Heng
 - Jovan
 - Joo Siang
-- 
+- Jia Jun
 - Sean
 - Zen
 
