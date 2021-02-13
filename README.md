@@ -85,6 +85,16 @@ This app was designed using [Google Pixel 4 / 4XL] as a reference point(https://
 ## Bugs
    - None known as of now
 
+## Import Instructions
+
+Before doing this, make sure you have downloaded XAMPP Control Panel.
+
+1. Open up XAMPP Control Panel and press "Start" on Apache and MySQL
+2. Create a new database by clicking "New" on the left side of the panel
+3. Next, click on "Import" located in the top menu bar
+4. Click on "Choose file" and import the "hintel.sql"
+5. Lastly, click on "Go" on the bottom right corner of the page and you are all set!
+
 ## Credits
 - Bing Heng
 - Jovan
@@ -92,8 +102,6 @@ This app was designed using [Google Pixel 4 / 4XL] as a reference point(https://
 - Jia Jun
 - Sean
 - Zen
-
-
 
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
