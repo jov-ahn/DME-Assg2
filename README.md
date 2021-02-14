@@ -85,7 +85,7 @@ This app was designed using [Google Pixel 4 / 4XL] as a reference point(https://
    - Responsive sizing
 
 ## Bugs
-   - None known as of now
+   - Unable to alert user items that are low on stocks
 
 ## Design Process
 
