@@ -1,5 +1,16 @@
 # DME Assignment 2 Hintel App
- 
+
+## How to use application
+   - First, install the app and tap to open up the app
+   - Next, Login with the correct details provided
+   - After logging in, there are multiple routes you can take
+      1. Stay on dashboard / home page to view expenses statistics and room statuses
+      2. Tap on Staff in the navigation bar to access the list of staff and their details
+      3. Tap on inventory to view the inventory count
+         a. Tap on toiletries button to view toiletries related items
+         b. Tap on FNB button to view food and beverages related items
+      4. Tap on settings to view the credits and to log out of the app
+
 ## Design Process
 
 The purpose of this app was meant for higher management / owners of Boutique Hotels. It is meant to allow access to up-to-date information that is linked & constantly sycnhronised from an external [Database](https://github.com/jov-ahn/DDWA-Assg2.git). This would allow them access to the hotel's information such as expenses, room statuses, staff details, inventory item count , etc. Overall allowing for more improved processes, lesser negative customer experiences and lower risk of data loss on excel sheets.
